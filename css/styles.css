@@ -4,19 +4,97 @@ body{
 }
 header{
   width: 100%;
-  height: 10vh;
-  background-color: red;
+  height: 5vh;
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
 }
 
 section{
   width: 100%;
   height: 80vh;
   background-color: green;
-
 }
 
 footer{
   width: 100%;
-  height: 10vh;
+  height: 15vh;
+  display: flex;
+  justify-content: flex-end;
   background-color: blue;
 }
+
+footer * {
+  margin-right: 40px;
+  position:relative;
+}
+
+header * {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  color: white;
+}
+
+footer div {
+  margin-top: auto;
+  margin-bottom: 30px;
+  color: white;
+  display:flex;
+}
+
+footer div span{
+  margin: auto;
+  margin-left: -20px;
+}
+
+footer div img{
+  width: 30px;
+  filter: invert(.9)
+}
+
+
+.data * {
+  margin-left: 10px;
+}
+
+.gamepad *{
+  margin-left: 10px;
+}
+
+.social * {
+  margin-right: 40px;
+}
+
+/*icons */
+
+.wifi-logo{
+  font-size:22px;
+  color: white;
+}
+
+.gamepad {
+  font-size: 25px;
+}
+
+.bell {
+  font-size: 23px;
+}
+
+.friends {
+  font-size: 24px;
+}
+
+.xbox-logo{
+  font-size: 23px;
+}
+
+.profile {
+  font-size: 23px;
+}
+
+
+
+
+
+
