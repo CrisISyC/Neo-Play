@@ -31,6 +31,7 @@ section {
   aspect-ratio: 1 / 1; /* Mantiene la relación cuadrada */
   background-color: #006FFF;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 
