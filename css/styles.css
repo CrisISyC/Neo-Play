@@ -3,10 +3,10 @@ html, body{
   padding: 0px;
   margin: 0px;
 }
+
 header{
   width: 100%;
   height: 5vh;
-  background-color: gray;
   display: flex;
   justify-content: space-between;
 }
@@ -29,9 +29,36 @@ section {
   min-width: 100px;
   max-width: 250px;
   aspect-ratio: 1 / 1; /* Mantiene la relación cuadrada */
-  background-color: #006FFF;
+  background-size: cover; /* La imagen cubre el contenedor */
+  background-position: center;
+  background-repeat: no-repeat;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+}
+
+/* Asigna una imagen diferente a cada cover */
+.game-cover-container:nth-child(1) {
+  background-image: url('../assets/resident-evil-4-cover.webp');
+}
+
+.game-cover-container:nth-child(2) {
+  background-image: url('../assets/red-dead-redemption-cover.webp');
+}
+
+.game-cover-container:nth-child(3) {
+  background-image: url('../assets/assasins-shadow-cover.webp');
+}
+
+.game-cover-container:nth-child(4) {
+  background-image: url('../assets/gears-of-war-5-cover.webp');
+}
+
+.game-cover-container:nth-child(5) {
+  background-image: url('../assets/halo-cover.webp');
+}
+
+.game-cover-container:nth-child(6) {
+  background-image: url('../assets/lies-of-p-cover.webp');
 }
 
 
@@ -40,34 +67,52 @@ section {
 }
 
 #background {
-  position: absolute;
+  position: fixed; /* Fijo en toda la pantalla */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: lightgray;
-  transition: background-color 0.3s ease-in-out;
+  background-size: cover; /* Ajusta la imagen al div */
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease-in-out;
+  z-index: -1; /* Queda detrás del contenido */
 }
 
-.game-cover-container:nth-child(1):hover ~ #background {
-  background-color: red;
+header, section, footer {
+  position: relative; /* Necesario para que z-index funcione */
+  z-index: 1; /* Más alto que -1 */
 }
 
-.game-cover-container:nth-child(2):hover ~ #background {
-  background-color: green;
+body:has(.game-cover-container:nth-child(1):hover) #background {
+  background-image: url('../assets/resident-evil-4-background.webp');
 }
 
-.game-cover-container:nth-child(3):hover ~ #background {
-  background-color: purple;
+body:has(.game-cover-container:nth-child(2):hover) #background {
+  background-image: url('../assets/red-dead-redemption-background.webp');
 }
 
+body:has(.game-cover-container:nth-child(3):hover) #background {
+  background-image: url('../assets/assasins-shadow-background.webp');
+}
+
+body:has(.game-cover-container:nth-child(4):hover) #background {
+  background-image: url('..//assets/gears-of-war-5-background.webp');
+}
+
+body:has(.game-cover-container:nth-child(5):hover) #background {
+  background-image: url('../assets/halo-background.webp');
+}
+
+body:has(.game-cover-container:nth-child(6):hover) #background {
+  background-image: url('../assets/lies-of-p-background.webp');
+}
 
 footer{
   width: 100%;
   height: 15vh;
   display: flex;
   justify-content: flex-end;
-  background-color: blue;
 }
 
 footer * {
