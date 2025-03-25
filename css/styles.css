@@ -27,7 +27,7 @@ section {
 .game-cover-container {
   flex: 1; /* Hace que cada cover ocupe el mismo espacio */
   min-width: 100px;
-  max-width: 250px;
+  max-width: 225px;
   aspect-ratio: 1 / 1; /* Mantiene la relación cuadrada */
   background-size: cover; /* La imagen cubre el contenedor */
   background-position: center;
@@ -61,9 +61,20 @@ section {
   background-image: url('../assets/lies-of-p-cover.webp');
 }
 
+/*Destacar el ultimo cover en el que se paso el mouse*/
+section:not(:has(.game-cover-container:hover)) .game-cover-container.active {
+  transform: scale(1.17);
+}
 
 .game-cover-container:hover{
-  transform: scale(1.1);
+  transform: scale(1.17);
+}
+
+/* ==== BACKGROUND CONFIGURATION ==== */
+
+header, section, footer {
+  position: relative; /* Necesario para que z-index funcione */
+  z-index: 1; /* Más alto que -1 */
 }
 
 #background {
@@ -79,33 +90,10 @@ section {
   z-index: -1; /* Queda detrás del contenido */
 }
 
-header, section, footer {
-  position: relative; /* Necesario para que z-index funcione */
-  z-index: 1; /* Más alto que -1 */
-}
 
-body:has(.game-cover-container:nth-child(1):hover) #background {
-  background-image: url('../assets/resident-evil-4-background.webp');
-}
-
-body:has(.game-cover-container:nth-child(2):hover) #background {
-  background-image: url('../assets/red-dead-redemption-background.webp');
-}
-
-body:has(.game-cover-container:nth-child(3):hover) #background {
-  background-image: url('../assets/assasins-shadow-background.webp');
-}
-
-body:has(.game-cover-container:nth-child(4):hover) #background {
-  background-image: url('..//assets/gears-of-war-5-background.webp');
-}
-
-body:has(.game-cover-container:nth-child(5):hover) #background {
-  background-image: url('../assets/halo-background.webp');
-}
-
-body:has(.game-cover-container:nth-child(6):hover) #background {
-  background-image: url('../assets/lies-of-p-background.webp');
+/* Fondo por defecto */
+body #background {
+  background-image: var(--background-image, url('../assets/resident-evil-4-background.webp'));
 }
 
 footer{
