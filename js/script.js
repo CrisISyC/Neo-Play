@@ -13,10 +13,12 @@ let elements = document.getElementsByClassName("game-cover-container");
 
 for (let i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", desplegarInfo);
+  elements[i].addEventListener("click", hideGames);
 }
 
 function desplegarInfo(game) {
   description(game.target.id);
+  document.getElementById("game-info").className += " animation-info"
 }
 
 function description(id) {
@@ -45,6 +47,10 @@ function description(id) {
     document.getElementById("title").innerHTML = "Lies Of P";
     document.getElementById("text").innerHTML = "Pinocho souls like";
   }
+}
 
-  //document.getElementById("id").classList.add("despliegue");
+function hideGames() {
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].className += " despliegue";
+  }
 }
