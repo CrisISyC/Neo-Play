@@ -19,6 +19,7 @@ for (let i = 0; i < elements.length; i++) {
 function desplegarInfo(game) {
   description(game.target.id);
   document.getElementById("game-info").className += " animation-info"
+  document.getElementById("background").className += " background-resize"
 }
 
 function description(id) {
