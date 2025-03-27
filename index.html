@@ -20,7 +20,7 @@
   <body>
     <header>
       <div class="data">
-        <div>16:17</div>
+        <div id="hour">16:17</div>
         <div class="bi-wifi wifi-logo"></div>
       </div>
       <div class="gamepad">
@@ -47,28 +47,39 @@
     <div id="background" class="background-position"></div>
 
     <footer>
-      <div>
-        <img src="assets/icons8-xbox-x-50.png" alt="" /><span>options</span>
+      <div class="options-button">
+        <img src="assets/icons8-xbox-x-50.png" alt=""/><span class="button-xbox">OPTIONS</span>
+      </div>
+      <div class="options-button">
+        <img src="assets/icons8-xbox-y-50.png" alt="" /><span class="button-xbox">TOP MENU</span>
       </div>
       <div>
-        <img src="assets/icons8-xbox-y-50.png" alt="" /><span>top menu</span>
+        <img src="assets/icons8-xbox-a-50.png" alt="" /><span class="button-xbox">PLAY</span>
       </div>
-      <div>
-        <img src="assets/icons8-xbox-a-50.png" alt="" /><span>play</span>
-      </div>
-      <div>
-        <img src="assets/icons8-xbox-b-50.png" alt="" /><span>exit</span>
+      <div id="button-xbox-B">
+        <img src="assets/icons8-xbox-b-50.png" alt="" /><span class="button-xbox">EXIT</span>
       </div>
     </footer>
 
     <div class="game-info" id="game-info">
-      <h1 id="title">Hola a todos</h1>
-      <p id="text">zapato</p>
+      <p id="id-xbox"> XBOX </p>
+      <h1 id="title"></h1>
+      
+      <div class="statistics"> 
+        <p>PLAYED FOR</p>
+        <p>STORAGE</p>
+        <p>ADDONS</p>
+        <p>OWNED BY FRIENDS</p>
+        <h2>23<span class="small-text">H</span>19<span class="small-text">M</span></h2>
+        <h2>156<span class="small-text">GB</span></h2>
+        <h2>6</h2>
+        <h2>12</h2>
+      </div>
+      <p id="text"></p>
     </div>
 
   </footer>
   
-  <div id="game-info"></div>
   
   <script src="./js/script.js"></script>
   <script src="./js/backgroundSwitcher.js"></script>

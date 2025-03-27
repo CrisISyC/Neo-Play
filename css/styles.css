@@ -4,6 +4,7 @@ body {
   padding: 0px;
   margin: 0px;
   overflow: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 header {
@@ -37,31 +38,80 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   transition: transform 0.8s ease-in-out;
+  transition:
+  opacity 0.5s ease-out,
+  transform 0.8s ease-out;
   cursor: pointer;
 }
 
 .game-info {
-  background-color: red;
-  border: 1px solid black;
+  padding: 100px;
+  padding-top: 130px;
+  background-color: #1b1f23;
+  border-top: 1px solid black;
+  color: white;
   width: 60%;
   height: 100vh;
+  transition: transform 0.6s;
+  box-sizing: border-box;
 }
 
+.game-info #id-xbox{
+  grid-row: 1;
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px;
+  text-align: left;
+  color: #83898f
+}
+
+.game-info #title{
+  margin: 0px;
+  padding-bottom: 60px;
+  font-size: 40px;
+}
+
+.statistics {
+  display: grid;
+  grid-template-columns: 1fr,1fr,1fr,1fr;
+  grid-template-rows: auto auto;
+  text-align: left;
+}
+
+.statistics p{
+  grid-row: 1;
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px;
+  text-align: left;
+  color: #83898f
+}
+
+.statistics h2{
+  margin: 0px;
+  padding: 0px;
+  font-size: 30px;
+}
+
+.statistics .small-text{
+  font-size: 19px;
+}
+
+.game-info #text{
+  padding-top: 30px;
+
+}
 /* animacion game info despliegue y desplazar imagen a la derecha*/
 .animation-info {
   transform: translateY(-100%);
   top: 0;
   left: 0;
-  transition: transform 0.6s;
 }
 
 .despliegue {
   opacity: 0;
   transform: translateY(-100vh);
-
-  transition:
-    opacity 0.5s ease-out,
-    transform 0.8s ease-out;
+  cursor: default;
 }
 
 /* Asigna una imagen diferente a cada cover */
@@ -121,7 +171,8 @@ footer {
   /* Ajusta la imagen al div */
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out,
+    width 0.8s ease-in-out;
   z-index: -1;
   /* Queda detrás del contenido */
 }
@@ -139,6 +190,15 @@ footer {
   background-repeat: no-repeat;
   transition: width 0.8s ease-in-out;
   z-index: -1;
+}
+
+/* return to the main screen */
+.exit-button{
+  cursor: pointer;
+}
+
+.hide-buttons{
+  display: none;
 }
 
 /* Fondo por defecto */
@@ -175,7 +235,9 @@ footer div {
 
 footer div span {
   margin: auto;
-  margin-left: -20px;
+  margin-left: -35px;
+  font-size: 14px;
+  cursor: default;
 }
 
 footer div img {
@@ -185,6 +247,10 @@ footer div img {
 
 .data * {
   margin-left: 10px;
+}
+
+.data #hour{
+  cursor: default;
 }
 
 .gamepad * {
